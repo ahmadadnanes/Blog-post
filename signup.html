@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- main css files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/singup.css">
+    <!-- other css files -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/brands.min.css">
+    <link rel="stylesheet" href="css/normal.css">
+    <title>SignUp</title>
+</head>
+<body>
+    <!-- start header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="img/blogger_black_logo_icon_147154.png" height="40px">
+            </div>
+            <nav>
+                <div class="normal_nav" style="display: block;">
+                    <ul>
+                        <li>
+                            <a href="signup.html">SignUp</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- end header -->
+
+    <!-- start signup -->
+    <section>
+        <div class="container">
+            <div class="form">
+                <form action="php/sign.php" method="post">
+                    <div class="username">
+                       <label for="username">
+                        Enter your username :
+                       </label>
+                        <br>
+                        <input type="text" name="username" id="user" required>
+                        <br>
+                    </div>
+                    <div class="user">
+                        <label for="user">
+                            Enter Your Email :
+                        </label><br>
+                        <input type="email" name="user" id="user" required>
+                        <br>
+                    </div>
+                    <div class="password">
+                        <label for="user">
+                            Enter Your password:
+                        </label><br>
+                        <input type="password" name="password" id="password" required minlength="8">
+                    </div>
+                    <div class="submit">
+                        <button>
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- end signup -->
+    
+    <!-- JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

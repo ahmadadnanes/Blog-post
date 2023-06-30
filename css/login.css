@@ -1,0 +1,41 @@
+section{
+    padding: 50px;
+}
+
+section .container .form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+section .container .form .user{
+    padding: 15px;
+}
+
+section .container .form .user input{
+    border-radius: 4px;
+    padding: 10px;
+}
+
+section .container .form .password{
+    padding: 15px;
+}
+
+section .container .form .password input{
+    border-radius: 4px;
+    padding: 10px;
+}
+
+section .container .form .submit button{
+    position: fixed;
+    left: 44%;
+    transform: translateY(-44%);
+    padding: 5px;
+    border-radius: 4px;
+    color: aqua;
+}
+
+section .container .form .submit button:hover{
+    background-color: black;
+}

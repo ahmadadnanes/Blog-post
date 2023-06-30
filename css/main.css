@@ -1,0 +1,156 @@
+/* start - global */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "poppins" , sans-serif;
+}
+
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width:600px;
+    max-width:100%
+}
+
+ul{
+    list-style: none;
+}
+
+    /* start - media */
+
+        /* small */
+
+
+@media (min-width : 768px) {
+    .container{
+        width: 750px;
+    }
+}
+
+
+	/* medium */
+
+@media (min-width : 992px){
+    .container{
+        width: 970px;
+    }
+}
+
+
+	/* large */
+
+@media (min-width : 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+    /* end - media */
+ /* end - global */
+
+ /* start header */
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+}
+
+header .container nav .normal_nav{
+    display: none;
+}
+
+header .container nav .normal_nav ul{
+    display: flex;
+    transition: 0.3s;
+}
+
+header .container nav .normal_nav ul li{
+    padding: 15px;
+}
+
+header .container nav .normal_nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+header .container nav .normal_nav ul li a :hover{
+    color: blue;
+}
+
+header .container nav .drop_nav{
+    position: relative;
+}
+
+header .container nav .drop_nav ul {
+    display: none;
+    background-color: black;
+    position: absolute;
+    right: 0px;
+    min-width: 200px;
+    top: calc(100% + 15px);
+}
+
+header .container nav .drop_nav ul li{
+    text-align: center;
+    padding: 10px;
+}
+
+header .container nav .drop_nav ul li ::before{
+    content: "";
+    position: absolute;
+    border-color: transparent transparent black transparent;
+    border-style: solid ;
+    top: -19px;
+    right: 1px;
+    border-width: 10px;
+}
+
+header .container nav .drop_nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+@media (min-width: 992px) {
+    header .container nav .normal_nav{
+        display: block;
+    }
+    header .container nav .drop_nav{
+        display: none;
+    }
+    
+}
+
+ /* end header */
+
+ /* start blog */
+ section{
+    padding: 50px;
+ }
+
+ section .container .card{
+    border: 2px solid black;
+    border-radius: 4px;
+ }
+
+ section .container .card .title{
+    text-align: center;
+ }
+ section .container .card p{
+   padding: 10px;
+ }
+ /* end blog */
