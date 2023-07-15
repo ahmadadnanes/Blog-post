@@ -1,5 +1,14 @@
+<?php
+include "php/conn.php";
+session_start();
+$idn = "";
+if (isset($_SESSION["id"])) {
+    header("location: Home.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +21,7 @@
     <link rel="stylesheet" href="css/normal.css">
     <title>login</title>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -60,4 +70,5 @@
     <!-- JS -->
     <script src="js/main.js"></script>
 </body>
+
 </html>

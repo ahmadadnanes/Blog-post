@@ -2,12 +2,17 @@
 include "php/conn.php";
 session_start();
 $idn = "";
-$idn = $_SESSION["id"];
-$id = implode(" ", $idn);
-$sql = "SELECT username from users where id = '$id'";
-$result = mysqli_query($conn, $sql);
-$us = mysqli_fetch_assoc($result);
-$user = $us["username"];
+if (isset($_SESSION["id"])) {
+    $idn = $_SESSION["id"];
+    $id = implode(" ", $idn);
+    $sql = "SELECT username from users where id = '$id'";
+    $result = mysqli_query($conn, $sql);
+    $us = mysqli_fetch_assoc($result);
+    $user = $us["username"];
+} else {
+    header("location: index.php");
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
