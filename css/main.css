@@ -140,6 +140,7 @@ header .container nav .drop_nav ul li a{
  /* start blog */
  section{
     padding: 50px;
+    height: 100vh;
  }
 
  section .container .card{
@@ -154,3 +155,26 @@ header .container nav .drop_nav ul li a{
    padding: 10px;
  }
  /* end blog */
+
+ /* start footer */
+ footer{
+    background-color: black;
+ }
+
+ footer .text{
+    color: white;
+    text-align: center;
+    padding: 10px;
+ }
+
+ footer .social ul{
+    display: flex;
+    justify-content: center;
+ }
+
+ footer .social i{
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+ }
+ /* end footer */

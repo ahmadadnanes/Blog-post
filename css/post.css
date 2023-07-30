@@ -1,5 +1,5 @@
 section{
-    padding: 50px
+    padding: 50px;
 }
 
 section .container .form {
@@ -28,7 +28,7 @@ section .container .form .blog textarea{
 }
 
 section .container .form .submit button{
-    position: fixed;
+    position: absolute;
     left: 44%;
     transform: translateY(-44%);
     padding: 5px;

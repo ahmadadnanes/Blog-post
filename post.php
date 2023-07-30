@@ -25,7 +25,7 @@ $id = implode(" ", $idn);
     <header>
         <div class="container">
             <div class="logo">
-                <img src="img/blogger_black_logo_icon_147154.png" height="40px">
+                <a href="<?php echo "Home.php?$id" ?>"><img src="img/blogger_black_logo_icon_147154.png" height="40px"></a>
             </div>
             <nav>
                 <div class="normal_nav">
@@ -80,6 +80,22 @@ $id = implode(" ", $idn);
         </div>
     </section>
     <!-- end create post -->
+
+    <!-- start footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="text">
+                <h3>Follow Me</h3>
+            </div>
+            <div class="social">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/ahmad-istaitieh-64a635248/"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/ahmadadnanes"><i class="fa-brands fa-github"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
 
     <!-- JS -->
     <script src="js/main.js"></script>

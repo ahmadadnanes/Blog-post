@@ -95,6 +95,22 @@ if (isset($_SESSION["id"])) {
     </section>
     <!-- end blog -->
 
+    <!-- start footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="text">
+                <h3>Follow Me</h3>
+            </div>
+            <div class="social">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/ahmad-istaitieh-64a635248/"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/ahmadadnanes"><i class="fa-brands fa-github"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+
 </body>
 <!-- JS -->
 <script src="js/main.js"></script>
