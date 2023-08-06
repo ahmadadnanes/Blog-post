@@ -61,13 +61,13 @@ $id = implode(" ", $idn);
                     <div class="title">
                         <label for="title">
                             enter the title of your blog :
-                        </label><br>
+                        </label><br><br>
                         <input type="text" name="title" id="title" required><br>
                     </div>
                     <div class="blog">
                         <label for="blog">
                             enter the blog :
-                        </label><br>
+                        </label><br><br>
                         <textarea name="blog" id="blog" cols="30" rows="10" required></textarea>
                     </div>
                     <div class="submit">

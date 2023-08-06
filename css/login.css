@@ -7,33 +7,43 @@ section .container .form{
     justify-content: center;
     align-items: center;
     position: relative;
+    background-color: black;
+    border-radius: 10px;
+}
+
+section .container .form .username{
+    margin-top: 20px;
 }
 
 section .container .form .user{
     padding: 15px;
+    border: none;
 }
 
 section .container .form .user input{
     border-radius: 4px;
     padding: 10px;
+    border: none;
 }
 
 section .container .form .password{
     padding: 15px;
+    border: none;
 }
 
 section .container .form .password input{
     border-radius: 4px;
     padding: 10px;
+    border: none;
 }
 
 section .container .form .submit button{
-    position: fixed;
-    left: 44%;
-    transform: translateY(-44%);
     padding: 5px;
+    margin: 20px;
+    margin-left: 85px;
     border-radius: 4px;
     color: aqua;
+    border: none;
 }
 
 section .container .form .submit button:hover{

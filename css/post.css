@@ -7,6 +7,12 @@ section .container .form {
     justify-content: center;
     align-items: center;
     position: relative;
+    background-color: black;
+    border-radius: 10px;
+}
+
+section .container .form label{
+    color: white;
 }
 
 section .container .form .title{
@@ -16,6 +22,7 @@ section .container .form .title{
 section .container .form .title input{
     border-radius: 4px;
     padding: 10px;
+    width: 280px;
 }
 
 section .container .form .blog{
@@ -25,17 +32,32 @@ section .container .form .blog{
 section .container .form .blog textarea{
     border-radius: 4px;
     padding: 10px;
+    
 }
 
 section .container .form .submit button{
-    position: absolute;
-    left: 44%;
-    transform: translateY(-44%);
     padding: 5px;
     border-radius: 4px;
     color: aqua;
+    margin-bottom: 20px;
+    border: none;
+    margin-left: 115px;
 }
 
 section .container .form .submit button:hover{
     background-color: black;
+}
+
+@media (max-width:500px) {
+    section .container .form label{
+        margin-left: 25px;
+    }
+    section .container .form .title input{
+        width: 200px;
+        margin-left: 25px;
+    }
+
+    section .container .form textarea{
+        width: 250px;
+    }
 }

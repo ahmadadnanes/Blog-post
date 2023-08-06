@@ -15,6 +15,7 @@ html{
 
 body{
     font-family: "poppins" , sans-serif;
+    background-color: #eee;
 }
 
 .container{
@@ -140,7 +141,7 @@ header .container nav .drop_nav ul li a{
  /* start blog */
  section{
     padding: 50px;
-    height: 100vh;
+    min-height: 100vh;
  }
 
  section .container .card{
