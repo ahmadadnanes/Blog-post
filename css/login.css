@@ -2,6 +2,12 @@ section{
     padding: 50px;
 }
 
+section .container h2{
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 section .container .form{
     display: flex;
     justify-content: center;
@@ -35,6 +41,12 @@ section .container .form .password input{
     border-radius: 4px;
     padding: 10px;
     border: none;
+}
+
+section .container h3{
+    margin-top: 20px;
+    color: black;
+    text-align: center;
 }
 
 section .container .form .submit button{

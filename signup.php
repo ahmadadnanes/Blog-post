@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="css/normal.css">
     <title>SignUp</title>
 </head>
+
 <body>
     <!-- start header -->
     <header>
@@ -36,6 +38,7 @@
     <!-- start signup -->
     <section>
         <div class="container">
+            <h2>SignUp</h2>
             <div class="form">
                 <form action="php/sign.php" method="post">
                     <div class="username">
@@ -56,27 +59,36 @@
                     </div>
                 </form>
             </div>
+            <?php
+            if (isset($_GET["msg"])) { ?>
+                <div class="error">
+                    <h3><?php echo "this email is already in use" ?></h3>
+                </div>
+            <?php
+            }
+            ?>
         </div>
     </section>
     <!-- end signup -->
 
-        <!-- start footer -->
-        <footer>
-            <div class="footer-container">
-                <div class="text">
-                    <h3>Follow Me</h3>
-                </div>
-                <div class="social">
-                    <ul>
-                        <li><a href="https://www.linkedin.com/in/ahmad-istaitieh-64a635248/"><i class="fa-brands fa-linkedin"></i></a></li>
-                        <li><a href="https://github.com/ahmadadnanes"><i class="fa-brands fa-github"></i></a></li>
-                    </ul>
-                </div>
+    <!-- start footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="text">
+                <h3>Follow Me</h3>
             </div>
-        </footer>
-        <!-- end footer -->
-    
+            <div class="social">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/ahmad-istaitieh-64a635248/"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/ahmadadnanes"><i class="fa-brands fa-github"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+
     <!-- JS -->
     <script src="js/main.js"></script>
 </body>
+
 </html>

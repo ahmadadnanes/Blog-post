@@ -5,7 +5,7 @@ if (isset($_SESSION["id"])) {
     $idn = $_SESSION["id"];
     $id = implode(" ", $idn);
 } else {
-    header("location: ../index.html");
+    header("location: ../index.php");
 }
 include "conn.php";
 

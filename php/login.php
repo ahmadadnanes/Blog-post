@@ -4,17 +4,18 @@ $email = trim($_POST["user"]);
 $sql = "SELECT email from users where email like '$email'";
 $result = mysqli_query($conn, $sql);
 $pass = trim($_POST["password"]);
-
+$error = 1;
 if (mysqli_num_rows($result)) {
     checkPass($email, $pass);
 } else {
-    echo "this email doesn't exist";
+    header("location: ../index.php?msg=1");
 }
 
 
 function checkPass($em, $pass)
 {
     global $conn;
+    global $error;
     $sql = "SELECT pass from users where email like '$em'";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
@@ -29,7 +30,7 @@ function checkPass($em, $pass)
         $id = $_SESSION["id"];
         header("location:../Home.php?id=$id");
     } else {
-        echo "wrong password";
+        header("location: ../index.php?msg=$error");
     }
 }
 

@@ -32,7 +32,7 @@ if (isset($_SESSION["id"])) {
                 <div class="normal_nav" style="display: block;">
                     <ul>
                         <li>
-                            <a href="signup.html">SignUp</a>
+                            <a href="signup.php">SignUp</a>
                         </li>
                     </ul>
                 </div>
@@ -42,19 +42,14 @@ if (isset($_SESSION["id"])) {
     <!-- start login -->
     <section>
         <div class="container">
+            <h2>Login</h2>
             <div class="form">
                 <form action="php/login.php" method="post">
                     <div class="user">
-                        <label for="user">
-                            Enter Your Email :
-                        </label><br>
                         <input type="email" name="user" id="user" required placeholder="email">
                         <br>
                     </div>
                     <div class="password">
-                        <label for="user">
-                            Enter Your password:
-                        </label><br>
                         <input type="password" name="password" id="password" required placeholder="password">
                     </div>
                     <div class="submit">
@@ -62,8 +57,17 @@ if (isset($_SESSION["id"])) {
                             Submit
                         </button>
                     </div>
+                    <br>
                 </form>
             </div>
+            <?php
+            if (isset($_GET["msg"])) { ?>
+                <div class="error">
+                    <h3><?php echo "email or password does not exist" ?></h3>
+                </div>
+            <?php
+            }
+            ?>
         </div>
     </section>
     <!-- end login -->
