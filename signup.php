@@ -62,7 +62,7 @@
             <?php
             if (isset($_GET["msg"])) { ?>
                 <div class="error">
-                    <h3><?php echo "this email is already in use" ?></h3>
+                    <h3><?php echo "this email or username is already in use" ?></h3>
                 </div>
             <?php
             }

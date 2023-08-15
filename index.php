@@ -63,7 +63,7 @@ if (isset($_SESSION["id"])) {
             <?php
             if (isset($_GET["msg"])) { ?>
                 <div class="error">
-                    <h3><?php echo "email or password does not exist" ?></h3>
+                    <h3><?php echo "email or password is wrong try again" ?></h3>
                 </div>
             <?php
             }
