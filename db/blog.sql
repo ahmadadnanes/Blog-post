@@ -38,9 +38,6 @@ CREATE TABLE `save_blog` (
 -- Dumping data for table `save_blog`
 --
 
-INSERT INTO `save_blog` (`id`, `user_id`, `blog_name`, `blog_content`) VALUES
-(14, 4, 'hi', 'HI');
-
 -- --------------------------------------------------------
 
 --
@@ -57,9 +54,6 @@ CREATE TABLE `users` (
 --
 -- Dumping data for table `users`
 --
-
-INSERT INTO `users` (`id`, `username`, `email`, `pass`) VALUES
-(4, 'ahmad', 'aa264048@gmail.com', '20b3435bf7c1e2c2d8f004a64fd9464c');
 
 --
 -- Indexes for dumped tables
