@@ -145,6 +145,7 @@ header .container nav .drop_nav ul li a{
  }
 
  section .container .card{
+    margin-bottom: 20px;
     border: 2px solid black;
     border-radius: 4px;
  }

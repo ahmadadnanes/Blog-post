@@ -7,12 +7,11 @@ section .container .form {
     justify-content: center;
     align-items: center;
     position: relative;
-    background-color: black;
     border-radius: 10px;
 }
 
 section .container .form label{
-    color: white;
+    color: black;
 }
 
 section .container .form .title{
@@ -23,6 +22,7 @@ section .container .form .title input{
     border-radius: 4px;
     padding: 10px;
     width: 280px;
+    border: none;
 }
 
 section .container .form .blog{
@@ -32,12 +32,14 @@ section .container .form .blog{
 section .container .form .blog textarea{
     border-radius: 4px;
     padding: 10px;
+    border: none;
     
 }
 
 section .container .form .submit button{
     padding: 5px;
     border-radius: 4px;
+    background-color: white;
     color: aqua;
     margin-bottom: 20px;
     border: none;

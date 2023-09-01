@@ -1,5 +1,8 @@
 section{
     padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 section .container h2{
@@ -13,12 +16,15 @@ section .container .form{
     justify-content: center;
     align-items: center;
     position: relative;
-    background-color: black;
     border-radius: 10px;
 }
 
 section .container .form .username{
     margin-top: 20px;
+}
+
+section .container .form .username input{
+    border: none;
 }
 
 section .container .form .user{
@@ -56,6 +62,7 @@ section .container .form .submit button{
     border-radius: 4px;
     color: aqua;
     border: none;
+    background-color: white;
 }
 
 section .container .form .submit button:hover{
