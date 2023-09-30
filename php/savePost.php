@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
-        header("location: ../Home.php?id='$id'");
+        header("location: ../index.php?id='$id'");
     } else {
         header("location: ../post.php?id='$id'");
     }

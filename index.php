@@ -3,7 +3,12 @@ include "php/conn.php";
 session_start();
 $idn = "";
 if (isset($_SESSION["id"])) {
-    header("location: Home.php");
+    $idn = $_SESSION["id"];
+    $id = implode(" ", $idn);
+    $sql = "SELECT username from users where id = '$id'";
+    $result = mysqli_query($conn, $sql);
+    $us = mysqli_fetch_assoc($result);
+    $user = $us["username"];
 }
 ?>
 <!DOCTYPE html>
@@ -12,65 +17,89 @@ if (isset($_SESSION["id"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- main css files -->
+    <!-- main css file -->
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/login.css">
     <!-- other css files -->
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/brands.min.css">
     <link rel="stylesheet" href="css/normal.css">
-    <title>login</title>
+    <title>Blog</title>
 </head>
 
 <body>
+    <!-- start header -->
     <header>
         <div class="container">
+            <div class="user">
+                <?php if (isset($_SESSION["id"])) { ?>
+                    <span><?php echo ($user) ?></span>
+                <?php } ?>
+            </div>
             <div class="logo">
                 <img src="img/blogger_black_logo_icon_147154.png" height="40px">
             </div>
             <nav>
-                <div class="normal_nav" style="display: block;">
+                <div class="normal_nav">
                     <ul>
                         <li>
-                            <a href="signup.php">SignUp</a>
+                            <a href="post.php">new post</a>
                         </li>
+                        <?php
+                        if (isset($_SESSION["id"])) { ?>
+                            <li>
+                                <a href="php/logout.php">logout</a>
+                            </li>
+                        <?php
+                        } else { ?> <li><a href="login.php">login</a></li> <?php } ?>
+                    </ul>
+                </div>
+
+                <div class="drop_nav">
+                    <input type="image" src="img/bars-solid.svg" alt="" height="40px" id="nav-btn">
+
+                    <ul id="drop-ul">
+                        <li>
+                            <a href="post.php">new post</a>
+                        </li>
+                        <?php
+                        if (isset($_SESSION["id"])) { ?>
+                            <li>
+                                <a href="php/logout.php">logout</a>
+                            </li>
+                        <?php
+                        } else { ?> <li><a href="login.php">login</a></li> <?php } ?>
+                    </ul>
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
-    <!-- start login -->
+    <!-- end header -->
+
+    <!-- start blog -->
     <section>
         <div class="container">
-            <h2>Login</h2>
-            <div class="form">
-                <form action="php/login.php" method="post">
-                    <div class="user">
-                        <input type="email" name="user" id="user" required placeholder="email">
-                        <br>
-                    </div>
-                    <div class="password">
-                        <input type="password" name="password" id="password" required placeholder="password">
-                    </div>
-                    <div class="submit">
-                        <button>
-                            Submit
-                        </button>
-                    </div>
-                    <br>
-                </form>
-            </div>
             <?php
-            if (isset($_GET["msg"])) { ?>
-                <div class="error">
-                    <h3><?php echo "email or password is wrong try again" ?></h3>
+            $query = "select user_id,blog_name,blog_content from save_blog order by id desc;";
+            $result = mysqli_query($conn, $query);
+            while ($row = mysqli_fetch_assoc($result)) {
+                $uid = $row["user_id"];
+                $pt = $row["blog_name"];
+                $pd = $row["blog_content"];
+            ?>
+
+                <div class="card">
+                    <p class="title"> <?php echo $pt  ?></p>
+                    <p>
+                        <?php echo $pd ?>
+                    </p>
                 </div>
             <?php
             }
             ?>
         </div>
     </section>
-    <!-- end login -->
+    <!-- end blog -->
 
     <!-- start footer -->
     <footer>
@@ -88,8 +117,12 @@ if (isset($_SESSION["id"])) {
     </footer>
     <!-- end footer -->
 
-    <!-- JS -->
-    <script src="js/main.js"></script>
 </body>
+<!-- JS -->
+<script src="js/main.js"></script>
+
+<?php
+mysqli_close($conn);
+?>
 
 </html>

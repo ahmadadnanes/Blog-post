@@ -1,8 +1,19 @@
 <?php
+require_once "php/conn.php";
 session_start();
-$idn = "";
-$idn = $_SESSION["id"];
-$id = implode(" ", $idn);
+if (isset($_SESSION["id"])) {
+    $id = implode($_SESSION["id"]);
+    $sql = "SELECT username from users where id = '$id'";
+    $result = mysqli_query($conn, $sql);
+    $us = mysqli_fetch_assoc($result);
+    $user = $us["username"];
+    $html = "index.php?id=$id";
+    $html2 = "YourDiares.php?id=$id";
+} else {
+    $actual_link = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    header("location:login.php?pre=$actual_link");
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +36,7 @@ $id = implode(" ", $idn);
     <header>
         <div class="container">
             <div class="logo">
-                <a href="<?php echo "Home.php?$id" ?>"><img src="img/blogger_black_logo_icon_147154.png" height="40px"></a>
+                <a href="index.php" "><img src=" img/blogger_black_logo_icon_147154.png" height="40px"></a>
             </div>
             <nav>
                 <div class="normal_nav">
@@ -53,7 +64,6 @@ $id = implode(" ", $idn);
     <section>
         <div class="container">
             <?php
-
             $html = "php/savePost?id='$id'";
             ?>
             <div class="form">
